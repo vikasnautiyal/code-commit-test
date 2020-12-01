@@ -1,5 +1,4 @@
-deploy:
-  provider: script
-  script: bash scripts/deploy.sh
-  on:
-    branch: develop
+language: ruby
+rvm:
+ - 2.2
+ - jruby
