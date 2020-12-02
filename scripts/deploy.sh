@@ -3,3 +3,4 @@ echo "Hello World"
 echo "/n"
 pwd
 whoami
+ls
