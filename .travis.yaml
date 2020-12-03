@@ -1,5 +1,7 @@
-deploy:
-  provider: script
-  script: bash scripts/deploy.sh
-  on:
-    branch: develop
+install: skip
+
+script:
+  - echo "Preparing to push code to aws CodeCommit."
+  - git remote add awscodecommit "https://$CC_USERNAME:$CC_PWD@$CC_REPO_URL"
+  - git push awscodecommit --mirror
+  - echo "Pushed code to CodeCommit."
